@@ -1,0 +1,22 @@
+ID: fsdm-load
+_schema-version: '2.0'
+version: 1.10.0
+
+modules:
+ - name: fsdm-hdi-load
+   type: hdb
+   path: db
+   requires:
+    - name: fsdm-load
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+    - name: fsdm-db
+
+resources:
+ - name: fsdm-load
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+   #source container
+ - name: fsdm-db
+   type: org.cloudfoundry.existing-service

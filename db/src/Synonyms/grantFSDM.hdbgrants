@@ -1,0 +1,1 @@
+{	"fsdm-db": {	    "object_owner": {	      "container_roles":["sap.fsdm.roles::DMLStatement#"]	    },	    "application_user": {			"container_roles":["sap.fsdm.roles::DMLStatement"]		}	}}
